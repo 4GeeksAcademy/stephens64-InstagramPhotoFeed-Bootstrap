@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <style>
+        .dropdown-menu-right {
+            left: auto;
+            right: 0;
+        }
+
+        .nav-pills .nav-link.active {
+            color: blue !important;
+            background-color: white !important;
+        }
+
+        .nav-pills .nav-link {
+            color: black !important;
+        }
+    </style>
+    <title>Only Bootstrap Instagram</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
+        <i class="fa fa-instagram mr-2" height="30" width="30" aria-hidden="true"></i>
+        <h5 class="mb-0">Is This Really Instagram?</h5>
+
+        <!--Create post button for larger screens-->
+
+        <div class="d-flex ml-auto">
+            <button type="button" class="btn btn-success d-none d-lg-inline-block mr-2" data-toggle="modal"
+                data-target="#exampleModal">
+                Create a new post
+            </button>
+
+            <!--Create post button for smaller screens-->
+
+            <div class="d-flex ml-auto">
+                <button type="button" class="btn btn-success  d-inline-block d-lg-none mr-2" data-toggle="modal"
+                    data-target="#exampleModal">
+                    <i class="fa fa-clipboard" aria-hidden="true"></i>
+                </button>
+
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                    Create your new post!
+                                </h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="caption">Caption:</label>
+                                    <textarea class="form-control" rows="3" id="caption" name="text"
+                                        placeholder="Share some cool stuff here..."></textarea>
+                                </div>
+                                <button type="button" class="btn btn-light">
+                                    <i class="fa fa-camera" aria-hidden="true"></i>
+                                </button>
+                                <button type="button" class="btn btn-light">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                    Close
+                                </button>
+                                <button type="button" class="btn btn-success">Publish</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Settings Dropdown Menu-->
+
+            <div class="btn-group">
+                <button class="btn btn-secondary dropdown-toggle mr-3" type="button" id="dropDownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropDownMenuButton">
+                    <a class="dropdown-item" href="#">Profile</a>
+                    <a class="dropdown-item" href="#">Accessibility</a>
+                    <a class="dropdown-item" href="#">Privacy and Data</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-danger" href="#">Log out</a>
+                </div>
+            </div>
+    </nav>
+    <div class="container-fluid mt-3">
+
+        <!--Pills-->
+
+        <ul class="nav nav-pills justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link" style="padding: 0.25rem 0.5rem; font-size: 0.875rem" id="pills-photo-tab"
+                    data-target="#pills-photo" data-toggle="pill">
+                    <i class="fa fa-table fa-xs" aria-hidden="true" style="font-size: 0.75rem"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" style="padding: 0.25rem 0.5rem; font-size: 0.875rem" id="pills-feed-tab"
+                    data-target="#pills-feed" data-toggle="pill">
+                    <i class="fa fa-square fa-xs" aria-hidden="true" style="font-size: 0.75rem"></i>
+                </a>
+            </li>
+        </ul>
+
+        <!-- Tab-Windows -->
+
+        <div class="tab-content">
+
+            <!--Feed-->
+
+            <div class="tab-pane fade active show" id="pills-feed" role="tabpanel" aria-labelledby="pills-feed-tab">
+                <div class="container-fluid g-1 mt-4">
+                    <div class="row">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4 p-0">
+
+                            <!--First Post-->
+
+                            <div class="border mb-3 bg-light">
+                                <div class="d-flex">
+                                    <h6 class="m-0 mt-1 ml-1">A Cute Dog</h6>
+                                    <p class="ml-auto mr-1"><b>08/26</b></p>
+                                </div>
+                                <div>
+                                    <img src="https://www.stockvault.net/data/2016/03/23/189840/preview16.jpg"
+                                        alt="dog photo" class="img-fluid" />
+                                </div>
+                                <div class="pb-3">
+                                    <p class="m-0 mb-1 mt-1 ml-1"><b>5209 Likes</b></p>
+                                    <p class="m-0 ml-1">
+                                        This is a picture of a very good boy!
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!--Second Post-->
+
+                            <div class="border mb-3 bg-light">
+                                <div class="d-flex">
+                                    <h6 class="m-0 mt-1 ml-1">The Beautiful Mountains</h6>
+                                    <p class="ml-auto mr-1"><b>9/14</b></p>
+                                </div>
+                                <div>
+                                    <img src="https://wallpapercave.com/wp/wp4511457.jpg" alt="viewpoint"
+                                        class="img-fluid" />
+                                </div>
+                                <div class="pb-3">
+                                    <p class="m-0 mb-1 mt-1 ml-1"><b>73329 Likes</b></p>
+                                    <p class="m-0 ml-1">
+                                        I absolutely love the mountains. So peaceful and awesome!
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!--Third Post-->
+
+                            <div class="border mb-3 bg-light">
+                                <div class="d-flex">
+                                    <h6 class="m-0 mt-1 ml-1">Vacation During Winter Months</h6>
+                                    <p class="ml-auto mr-1"><b>02/10</b></p>
+                                </div>
+                                <div>
+                                    <img src="https://www.traveloffpath.com/wp-content/uploads/2022/06/You-Can-Fly-Direct-To-Cancun-From-These-38-U.S.-Cities.jpg"
+                                        alt="scoring" class="img-fluid w-100" />
+                                </div>
+                                <div class="pb-3">
+                                    <p class="m-0 mb-1 mt-1 ml-1"><b>1.3M Likes</b></p>
+                                    <p class="m-0 ml-1">
+                                        Cancun is an amazing location to visit during the winter months! 10/10 would do
+                                        it again!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Photo Tab Window / Extra Posts -->
+
+            <div class="tab-pane fade" id="pills-photo" role="tabpanel" aria-labelledby="pills-photo-tab">
+                <div class="container-fluid g-1 mt-4">
+                    <div class="row">
+                        <div class="col-4 p-1">
+                            <img src="https://www.stockvault.net/data/2016/03/23/189840/preview16.jpg" alt="dog photo"
+                                class="img-fluid h-50 mb-2" />
+                            <img src="https://posts-cdn.kueez.net/OAyTRw3lzuXbeail/image-PsVOkM5mC70yIrht.jpg"
+                                alt="happiness" class="img-fluid h-50 mb-2" />
+                            <img src="http://images2.fanpop.com/images/photos/4600000/Nature-random-4657919-1600-1200.jpg"
+                                alt="family" class="img-fluid h-50 mb-2" />
+                        </div>
+                        <div class="col-4 p-1">
+                            <img src="https://wallpapercave.com/wp/wp4511457.jpg" alt="young people"
+                                class="img-fluid h-50 mb-2" />
+                            <img src="http://images4.fanpop.com/image/photos/17700000/Wallpaperz-random-17724984-1920-1080.jpg"
+                                alt="eiffel tower" class="img-fluid h-50 mb-2" />
+                            <img src="http://images5.fanpop.com/image/photos/28700000/Random-wallpapers-random-28702279-2560-1600.jpg"
+                                alt="coding" class="img-fluid h-50 mb-2" />
+                        </div>
+                        <div class="col-4 p-1">
+                            <img src="https://www.traveloffpath.com/wp-content/uploads/2022/06/You-Can-Fly-Direct-To-Cancun-From-These-38-U.S.-Cities.jpg"
+                                alt="viewpoint" class="img-fluid h-50 mb-2" />
+                            <img src="https://cdn.wallpapersafari.com/1/85/lkO0mF.jpg" alt="scoring"
+                                class="img-fluid h-50 mb-2" />
+                            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1d00a5f1-afaa-4b2f-b802-8ced65ad6428/dahs52b-dccc91c5-10e9-407b-9b2e-77b173e4bbd7.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzFkMDBhNWYxLWFmYWEtNGIyZi1iODAyLThjZWQ2NWFkNjQyOFwvZGFoczUyYi1kY2NjOTFjNS0xMGU5LTQwN2ItOWIyZS03N2IxNzNlNGJiZDcuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.j7YhPWofys7JvtPwctupST1h6JyAZJoAhROxAVKXG9E"
+                                alt="studying" class="img-fluid h-50 mb-2" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS-->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+<!--Brock Stephens-->
